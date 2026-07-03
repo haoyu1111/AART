@@ -1,0 +1,34 @@
+{
+  "model": {
+    "name": "AARTUNet2D",
+    "in_channels": 1,
+    "num_classes": 4,
+    "base_channels": 32,
+    "branches": [
+      "inner",
+      "blood_side_mismatch",
+      "radial_contrast",
+      "tangent_mean",
+      "tangent_range",
+      "tangent_persistence",
+      "blob_mean",
+      "blob_range"
+    ]
+  },
+  "data": {
+    "image_size": 128,
+    "labels": {
+      "0": "background",
+      "1": "LV cavity",
+      "2": "myocardium",
+      "3": "scar"
+    }
+  },
+  "training": {
+    "loss": "cross_entropy + foreground_dice",
+    "epochs": 35,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001
+  }
+}
