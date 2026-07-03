@@ -1,8 +1,7 @@
 # AART-Net
 
 This repository contains the AART components used for LGE-CMR LV, myocardium,
-and scar segmentation. It is intentionally limited to the AART method:
-comparison baselines and paper plotting scripts are not included.
+and scar segmentation.
 
 ## What is included
 
